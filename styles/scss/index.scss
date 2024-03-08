@@ -1,0 +1,33 @@
+
+:root {
+    --color-pri: rgb(100, 100, 100);
+
+    --color-text-pri: black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+//mobile
+@media only screen and (max-width: 767px) {
+    html {
+        font-size: min(1vw, calc(1vh * 1/2));
+    }
+}
+
+//tablet
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    html {
+        font-size: min(1vw, calc(1vh * 2/3));
+    }
+}
+
+//desktop
+@media only screen and (min-width: 1024px) {
+    html {
+        font-size: min(1vw, calc(1vh * 16/9));
+    }
+}
