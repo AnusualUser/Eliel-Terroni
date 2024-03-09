@@ -1,6 +1,27 @@
 body {
     background-color: var(--c-main);
 
+    nav {
+        display: none;
+        background-color: var(--c-colorBlock);
+        box-shadow: 0 0.5rem black;
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        padding: 1.5rem;
+        border-radius: 1rem;
+
+        ul {
+            display: flex;
+            gap: 1.5rem;
+
+            li {
+                display: inline-block;
+                font-size: 3.5rem;
+            }
+        }
+    }
+
     main {
         height: 100vh;
         display: grid;
@@ -14,6 +35,7 @@ body {
                 justify-self: start;
                 width: 25rem;
                 height: 40rem;
+                box-shadow: 0 0.5rem black;
             }
 
             &.colorBlock_02 {
@@ -23,6 +45,7 @@ body {
                 height: fit-content;
                 padding: 3rem;
                 margin: 1rem;
+                box-shadow: 0 0.5rem black;
 
                 h3 {
                     font-size: 6rem;
@@ -38,6 +61,7 @@ body {
                 width: 2rem;
                 height: 60rem;
                 margin: 60rem 3.3rem;
+                box-shadow: 0 0.5rem black;
             }
         }
 
@@ -47,23 +71,28 @@ body {
             grid-area: 1 / 1;
             margin: 4rem;
             display: grid;
-            grid-template: repeat(3, min-content) / min-content 5rem;
+            grid-template: repeat(3, min-content) / auto;
             border-radius: 1rem;
 
             >img {
-                background-color: var(--c-imageBackgroundColor);
-                margin: 2.5rem;
-                width: 60rem;
-                height: 90rem;
-                grid-area: 1 / 1 / 1 / 3;
-                border-radius: 1rem;
+                &.photo {
+                    background-color: var(--c-imageBackgroundColor);
+                    grid-area: 1 / 1;
+                    justify-self: center;
+                    margin: 2.5rem;
+                    width: 60rem;
+                    height: 90rem;
+                    border-radius: 1rem;
+                    filter: blur(1rem);
+                }
             }
 
             div {
                 &.contact {
                     background-color: var(--c-colorBlock);
-                    grid-area: 1 / 2 / 1 / 4;
-                    margin: 7.5rem 0 0;
+                    grid-area: 1 / 1;
+                    margin: 0 8rem;
+                    align-self: center;
                     padding: 2rem;
                     width: fit-content;
                     height: fit-content;
@@ -72,6 +101,8 @@ body {
                     align-items: center;
                     gap: 2rem;
                     border-radius: 1rem;
+                    box-shadow: 0 0.5rem black;
+                    z-index: 10;
 
                     a {
                         height: 7.5rem;
@@ -84,11 +115,40 @@ body {
 
                 &.colorBlock_04 {
                     background-color: var(--c-colorBlock);
-                    grid-area: 2 / 1 / 2 / 5;
+                    grid-area: 2 / 1;
                     justify-self: center;
                     width: 84rem;
                     height: 2rem;
                     border-radius: 1rem;
+                    box-shadow: 0 0.5rem black;
+                }
+
+                &.about {
+                    color: var(--tc-01);
+                    grid-area: 3 / 1;
+                    display: grid;
+                    justify-items: center;
+
+                    h1 {
+                        grid-area: 1 / 1;
+                        font-size: 10rem;
+                        font-weight: 1000;
+                        text-shadow: 0 0.5rem 0 black;
+                    }
+
+                    h3 {
+                        grid-area: 2 / 1;
+                        font-size: 6.8rem;
+                        text-shadow: 0 0.5rem 0 black;
+                    }
+
+                    p {
+                        margin: 1.5rem 0 0;
+                        font-size: 4rem;
+                        width: 75rem;
+                        text-align: justify;
+                        text-shadow: 0 0.4rem 0 black;
+                    }
                 }
             }
         }
