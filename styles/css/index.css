@@ -1,3 +1,10 @@
+:root {
+  --c-main: #404040;
+  --c-colorBlock: #D9D7D7;
+  --c-article: #905e41;
+  --c-imageBackgroundColor: #9c7757;
+}
+
 * {
   margin: 0;
   padding: 0;

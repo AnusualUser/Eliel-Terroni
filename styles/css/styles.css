@@ -1,0 +1,84 @@
+body {
+  background-color: var(--c-main);
+}
+body main {
+  height: 100vh;
+  display: grid;
+}
+body main > div {
+  background-color: var(--c-colorBlock);
+  border-radius: 1rem;
+}
+body main > div.colorBlock_01 {
+  grid-area: 1/1;
+  justify-self: start;
+  width: 25rem;
+  height: 40rem;
+}
+body main > div.colorBlock_02 {
+  z-index: 20;
+  grid-area: 1/1;
+  justify-self: end;
+  height: fit-content;
+  padding: 3rem;
+  margin: 1rem;
+}
+body main > div.colorBlock_02 h3 {
+  font-size: 6rem;
+  text-align: center;
+  line-height: 0.9;
+}
+body main > div.colorBlock_03 {
+  z-index: 20;
+  grid-area: 1/1;
+  justify-self: end;
+  width: 2rem;
+  height: 60rem;
+  margin: 60rem 3.3rem;
+}
+body main article {
+  z-index: 10;
+  background-color: var(--c-article);
+  grid-area: 1/1;
+  margin: 4rem;
+  display: grid;
+  grid-template: repeat(3, min-content)/min-content 5rem;
+  border-radius: 1rem;
+}
+body main article > img {
+  background-color: var(--c-imageBackgroundColor);
+  margin: 2.5rem;
+  width: 60rem;
+  height: 90rem;
+  grid-area: 1/1/1/3;
+  border-radius: 1rem;
+}
+body main article div.contact {
+  background-color: var(--c-colorBlock);
+  grid-area: 1/2/1/4;
+  margin: 7.5rem 0 0;
+  padding: 2rem;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 1rem;
+}
+body main article div.contact a {
+  height: 7.5rem;
+}
+body main article div.contact a img {
+  width: 7.5rem;
+}
+body main article div.colorBlock_04 {
+  background-color: var(--c-colorBlock);
+  grid-area: 2/1/2/5;
+  justify-self: center;
+  width: 84rem;
+  height: 2rem;
+  border-radius: 1rem;
+}
+
+/*# sourceMappingURL=styles.css.map */
